@@ -29,14 +29,13 @@ int main(void)
         scanf("%lld", &n);
         int digits[20]={0};
         long long int num=n;
-        int q=0;
+        int len=0;
         while(num!=0)
         {
-            digits[q]=num%10;
+            digits[len]=num%10;
             num /= 10;
-            q++;
+            len++;
         }
-        int len=q;
         int min=50;
         int count1=count(0,0,len,digits);
         if(count1<min) min=count1;
