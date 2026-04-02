@@ -33,13 +33,12 @@ int countzero(int len,int digits[])
 {
     int count=0;
     int k=0,l=0;
-    int rightdel=0;
+    int r=0;
     for(int i=0;i<len;i++)
     {
         if(digits[i]==0 && k!=1)
         {
             k=1;
-            count+=rightdel;
         }
         else if(digits[i]!=0 && k==1)
         {
@@ -52,10 +51,10 @@ int countzero(int len,int digits[])
         }
         else
         {
-            rightdel++;
+            r++;
         }
     }
-    if(l==1) return count;
+    if(l==1) return count+r;
     else return 50;
 }
 
